@@ -272,12 +272,12 @@ plt.tight_layout()
 plt.show()
 
 
-# In[234]:
+# In[235]:
 
 
 #correlation matrix heatmap between all cryptocurrencies
 df_close = pd.concat([df3_btc['close'],df3_eth['close'],df3_ltc['close'],df3_xrp['close'],df3_bch['close']],axis=1, keys=['BTC', 'ETH', 'LTC', 'XRP', 'BCH'])
-sns.heatmap(df_close.corr())
+sns.heatmap(df_close.corr(),annot = True, vmin = -1, vmax = 1)
 plt.show()
 
 
