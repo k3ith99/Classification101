@@ -4,7 +4,7 @@ MVP is to display cryptocurrency charts using a data visualisation framework
 
 ## Installation & Usage
 
-1. Ensure Pipenv and python is installed
+1. Ensure Pipenv and python are installed
 2. Clone the repo
 3. Enter the directory using `cd Classification101`
 3. Install dependencies `pipenv install`
@@ -21,6 +21,9 @@ MVP is to display cryptocurrency charts using a data visualisation framework
 * Jupyter Notebook
 * Numpy
 * Seaborn
+
+##
+* Correct Python interpreter does not load when pipenv shell is ran(May need to remove environment,exit shell and run pipenv commands again for script to run)
 
 
 ## Fixed Bugs
