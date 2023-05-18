@@ -130,28 +130,127 @@ plt.show()'''
 df3_btc['close'].loc['2020'].plot(figsize = (30,10))
 
 
-# In[155]:
+# In[158]:
 
 
-fig, ax = plt.subplots(figsize = (30,20))
+fig, ax = plt.subplots(figsize = (20,10))
 sns.lineplot(x='date', y='close', data=df3_btc.loc['2018':], ax=ax, color = "black",label = "BTC")
 ax.set_ylabel("close")
 ax.set_yscale('log')
-ax2 = ax.twinx()
 sns.lineplot(x='date', y='close', data=df3_eth, ax=ax, color = 'blue', label = "ETH")
-ax2.set_ylabel("close")
+
 
 sns.lineplot(x='date', y='close', data=df3_ltc.loc['2018':], ax=ax, color = 'green', label = "LTC")
-ax2.set_ylabel("close")
+
 
 sns.lineplot(x='date', y='close', data=df3_xrp.loc['2018':], ax=ax ,color = 'red',  label = "XRP")
-ax2.set_ylabel("close")
+
 
 sns.lineplot(x='date', y='close', data=df3_bch.loc['2018':], ax=ax, color = 'slategray', label = "BCH")
-ax2.set_ylabel("close")
 ax.set_title('Closing Prices for Cryptocurrencies since 2018')
+sns.set_style("whitegrid")
+sns.set_context("paper")
+plt.tight_layout()
 ax.legend()
 plt.show()
+
+
+# In[168]:
+
+
+#simple moving average for 20 days
+fig, ax = plt.subplots(figsize = (20,10))
+sns.lineplot(x='date', y='close', data=df3_btc.loc['2018':].rolling(20).mean(), ax=ax, color = "black",label = "BTC")
+ax.set_ylabel("close")
+ax.set_yscale('log')
+sns.lineplot(x='date', y='close', data=df3_eth.loc["2018":].rolling(20).mean(), ax=ax, color = 'blue', label = "ETH")
+
+
+sns.lineplot(x='date', y='close', data=df3_ltc.loc['2018':].rolling(20).mean(), ax=ax, color = 'green', label = "LTC")
+
+
+sns.lineplot(x='date', y='close', data=df3_xrp.loc['2018':].rolling(20).mean(), ax=ax ,color = 'red',  label = "XRP")
+
+
+sns.lineplot(x='date', y='close', data=df3_bch.loc['2018':].rolling(20).mean(), ax=ax, color = 'slategray', label = "BCH")
+ax.set_title('20 days rolling average for Cryptocurrencies since 2018')
+sns.set_style("whitegrid")
+sns.set_context("paper")
+plt.tight_layout()
+ax.legend()
+plt.show()
+
+
+# In[172]:
+
+
+#Exponentially weighted moving average for days
+fig, ax = plt.subplots(figsize = (20,10))
+sns.lineplot(x='date', y='close', data=df3_btc.loc['2018':].ewm(span = 20).mean(), ax=ax, color = "black",label = "BTC")
+ax.set_ylabel("close")
+ax.set_yscale('log')
+sns.lineplot(x='date', y='close', data=df3_eth.loc["2018":].ewm(span = 20).mean(), ax=ax, color = 'blue', label = "ETH")
+
+
+sns.lineplot(x='date', y='close', data=df3_ltc.loc['2018':].ewm(span = 20).mean(), ax=ax, color = 'green', label = "LTC")
+
+
+sns.lineplot(x='date', y='close', data=df3_xrp.loc['2018':].ewm(span = 20).mean(), ax=ax ,color = 'red',  label = "XRP")
+
+
+sns.lineplot(x='date', y='close', data=df3_bch.loc['2018':].ewm(span = 20).mean(), ax=ax, color = 'slategray', label = "BCH")
+ax.set_title('20 days rolling exponentially weighed average for Cryptocurrencies since 2018')
+sns.set_style("whitegrid")
+sns.set_context("paper")
+plt.tight_layout()
+ax.legend()
+plt.show()
+
+
+# In[179]:
+
+
+#rolling standard deviation
+#simple moving average for 20 days
+fig, ax = plt.subplots(figsize = (20,10))
+sns.lineplot(x='date', y='close', data=df3_btc.loc['2018':].rolling(20).std(), ax=ax, color = "black",label = "BTC")
+ax.set_ylabel("close")
+ax.set_yscale('log')
+sns.lineplot(x='date', y='close', data=df3_eth.loc["2018":].rolling(20).std(), ax=ax, color = 'blue', label = "ETH")
+
+
+sns.lineplot(x='date', y='close', data=df3_ltc.loc['2018':].rolling(20).std(), ax=ax, color = 'green', label = "LTC")
+
+
+sns.lineplot(x='date', y='close', data=df3_xrp.loc['2018':].rolling(20).std(), ax=ax ,color = 'red',  label = "XRP")
+
+
+sns.lineplot(x='date', y='close', data=df3_bch.loc['2018':].rolling(20).std(), ax=ax, color = 'slategray', label = "BCH")
+ax.set_title('Rolling standard deviation of Cryptocurrencies since 2018')
+
+sns.set_style("whitegrid")
+sns.set_context("paper")
+plt.tight_layout()
+ax.legend()
+plt.show()
+
+
+# In[180]:
+
+
+#boxplot of daily percentage changes
+
+
+# In[181]:
+
+
+#boxplot of weekly percentage changes
+
+
+# In[182]:
+
+
+#correlation matrix between bitcoin and other cryptocurrencies
 
 
 # In[ ]:
