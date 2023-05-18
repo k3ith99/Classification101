@@ -22,7 +22,7 @@ MVP is to display cryptocurrency charts using a data visualisation framework
 * Numpy
 * Seaborn
 
-##
+## Bugs
 * Correct Python interpreter does not load when pipenv shell is ran(May need to remove environment,exit shell and run pipenv commands again for script to run)
 
 
