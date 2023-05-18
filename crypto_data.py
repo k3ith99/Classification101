@@ -235,22 +235,51 @@ ax.legend()
 plt.show()
 
 
-# In[180]:
+# In[226]:
 
 
 #boxplot of daily percentage changes
 
+df_daily = pd.concat([df3_btc['daily_pct_change'],df3_eth['daily_pct_change'],df3_ltc['daily_pct_change'],df3_xrp['daily_pct_change'],df3_bch['daily_pct_change']],axis=1, keys=['BTC', 'ETH', 'LTC', 'XRP', 'BCH'])
 
-# In[181]:
+
+fig, ax = plt.subplots(figsize = (20,10))
+sns.boxenplot(data=df_daily,showfliers=False)
+plt.xlabel('Cryptocurrency')
+plt.ylabel('Daily Percentage Change')
+plt.title('Boxen Plots of Daily Percentage Change for Cryptocurrencies')
+sns.set_style("whitegrid")
+sns.set_context("paper")
+plt.tight_layout()
+plt.show()
+
+
+# In[227]:
 
 
 #boxplot of weekly percentage changes
+df_weekly = pd.concat([df3_btc['weekly_pct_change_btc'],df3_eth['weekly_pct_change_eth'],df3_ltc['weekly_pct_change_ltc'],df3_xrp['weekly_pct_change_xrp'],df3_bch['weekly_pct_change_bch']],axis=1, keys=['BTC', 'ETH', 'LTC', 'XRP', 'BCH'])
 
 
-# In[182]:
+fig, ax = plt.subplots(figsize = (20,10))
+sns.boxenplot(data=df_weekly,showfliers=False)
+plt.xlabel('Cryptocurrency')
+plt.ylabel('Weekly Percentage Change')
+plt.title('Boxen Plots of weekly Percentage Change for Cryptocurrencies')
+sns.set_style("whitegrid")
+sns.set_context("paper")
+plt.tight_layout()
+plt.show()
 
 
-#correlation matrix between bitcoin and other cryptocurrencies
+# In[234]:
+
+
+#correlation matrix heatmap between all cryptocurrencies
+df_close = pd.concat([df3_btc['close'],df3_eth['close'],df3_ltc['close'],df3_xrp['close'],df3_bch['close']],axis=1, keys=['BTC', 'ETH', 'LTC', 'XRP', 'BCH'])
+sns.heatmap(df_close.corr())
+plt.show()
+
 
 
 # In[ ]:
