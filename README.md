@@ -9,8 +9,11 @@ MVP is to display cryptocurrency charts using a data visualisation framework
 3. Enter the directory using `cd Classification101`
 3. Install dependencies `pipenv install`
 4. Enter shell `pipenv shell`
+
+
+
 5. Run script `pipenv run script'
-6. Alternatively watch this video to see it run [ ]
+6. Alternatively watch this video to see it run [ https://github.com/k3ith99/Classification101/assets/91618446/99cab2d1-f573-4b72-a83d-e4109dbcf32c ]
    
 <!-- to-do: usage -->
 
