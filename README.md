@@ -36,6 +36,7 @@ MVP is to display cryptocurrency charts using a data visualisation framework
 ## Improvements & Future Features
 
 * Load data into databricks/snowflake
+* Add voice & subtitles over video
 * Implement automation (heroku scheduler?)
 * Tableu?
 * Create a percentage change predictive model
