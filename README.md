@@ -38,6 +38,8 @@ MVP is to display cryptocurrency charts using a data visualisation framework
 * Load data into databricks/snowflake
 * Implement automation (heroku scheduler?)
 * Tableu?
+* Create a percentage change predictive model
+
 
 
 
