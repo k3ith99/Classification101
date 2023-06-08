@@ -12,6 +12,9 @@ jupyterlab = "*"
 urllib3 = "<=1.26.15"
 seaborn = "*"
 nbconvert = "*"
+py4j = "*"
+databricks = "*"
+databricks-sdk = "*"
 
 [dev-packages]
 
