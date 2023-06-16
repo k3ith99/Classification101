@@ -1,5 +1,7 @@
 # Classification101
-Simple classification project that will be continually updated
+
+## Project goal
+Simple classification project to understand Data engineering concepts and common technologies
 MVP is to display cryptocurrency charts using a data visualisation framework
 
 ## Installation & Usage
