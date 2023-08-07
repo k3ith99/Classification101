@@ -17,6 +17,8 @@ databricks = "*"
 databricks-sdk = "*"
 boto3 = "*"
 configparser = "*"
+fsspec = "*"
+s3fs = "*"
 
 [dev-packages]
 
