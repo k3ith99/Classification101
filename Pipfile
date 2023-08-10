@@ -19,6 +19,7 @@ boto3 = "*"
 configparser = "*"
 fsspec = "*"
 s3fs = "*"
+apache-airflow = {extras = ["amazon"], version = "*"}
 
 [dev-packages]
 
